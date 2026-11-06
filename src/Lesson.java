@@ -1,10 +1,7 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Lesson
-{
-     void main()
-     {
+public class Lesson {
+    void main() {
        /* int a = 8;
         if(a<10)
         {
@@ -99,7 +96,7 @@ public class Lesson
 
          scanner.close();*/
 
-         // Circle
+        // Circle
         /* Scanner scanner = new Scanner(System.in);
          scanner.useLocale(Locale.US);
          System.out.print("Введите радиус круга: ");
@@ -115,7 +112,7 @@ public class Lesson
          System.out.println("Площадь круга: " + s);
          scanner.close();*/
 
-         Scanner scanner = new Scanner(System.in);
+       /*  Scanner scanner = new Scanner(System.in);
          scanner.useLocale(Locale.US);
          //System.out.print("Введите температуру С°: " );
          while (true)
@@ -138,6 +135,47 @@ public class Lesson
              System.out.println("Температура в Кельвинах: " + k + " K");
              System.out.println("--------------------------");
          }
-         scanner.close();
+         scanner.close();*/
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите число a: ");
+        int a = scanner.nextInt();
+        System.out.print("Введите число b: ");
+        int b = scanner.nextInt();
+
+        int number = a;
+        int steps = 0;
+
+        for (int n = a; n <= b; n++)
+        {
+            int st = countSteps(n);
+            if (st > steps)
+            {
+                steps = st;
+                number = n;
+             }
+        }
+
+        System.out.println("Число: " + number + "  " + "Количество шагов: " + steps);
+        scanner.close();
+    }
+
+    private static int countSteps(long n)
+    {
+        int st = 0;
+        while (n > 1)
+        {
+            if (n % 2 == 0)
+            {
+                n /= 2;
+            }
+            else
+            {
+                n = n * 3 + 1;
+            }
+            st++;
+        }
+        return st;
     }
 }
