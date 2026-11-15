@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-public class Lesson {
     void main() {
        /* int a = 8;
         if(a<10)
@@ -178,4 +177,3 @@ public class Lesson {
         }
         return st;
     }
-}

@@ -33,6 +33,4 @@ void main() {
     System.out.println(age + " лет");
     System.out.println(age);
     console.close();
-
-
 }
